@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 import {connect} from "react-redux";
-import {searchActionCreator} from "./reducer.js";
+import {actionCreators} from "./reducer.js";
 
 class Scene3 extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class Scene3 extends Component {
         </Text>
         <TouchableOpacity
           onPress={() => {
-            dispatch(searchActionCreator.storeDataScene3({dataReduxFromScene3: this.state.dataReduxScene3}));
+            dispatch(actionCreators.storeDataScene3({dataReduxFromScene3: this.state.dataReduxScene3}));
             navigator.pop();
           }}
           >
@@ -62,7 +62,7 @@ class Scene3 extends Component {
          <Text>Data redux: {this.state.dataReduxScene3}</Text>
         </View>
         <Button title="Go Back" onPress={() => {
-          dispatch(searchActionCreator.storeDataScene3({dataReduxFromScene3: this.state.dataReduxScene3}));
+          dispatch(actionCreators.storeDataScene3({dataReduxFromScene3: this.state.dataReduxScene3}));
           navigator.pop();
         }}
          />

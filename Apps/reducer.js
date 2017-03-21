@@ -7,7 +7,7 @@ const types = {
 }
 
 // Defined actions
-export const searchActionCreator = {
+export const actionCreators = {
   storeDataScene1 (params){
     return {
       type: types.dataScene1,

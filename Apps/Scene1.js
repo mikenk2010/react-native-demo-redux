@@ -13,7 +13,7 @@ import {
 import Scene2 from '../Apps/Scene2.js';
 
 import {connect} from 'react-redux';
-import {searchActionCreator} from "./reducer.js";
+import {actionCreators} from "./reducer.js";
 
 class Scene1 extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class Scene1 extends Component {
         </Text>
         <TouchableOpacity
           onPress={() => {
-            dispatch(searchActionCreator.storeDataScene1({dataReduxFromScene1: this.state.dataRedux})); //
+            dispatch(actionCreators.storeDataScene1({dataReduxFromScene1: this.state.dataRedux})); //
             navigator.push({
               title: 'Scene2',
               component: Scene2,
