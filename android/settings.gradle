@@ -1,0 +1,3 @@
+rootProject.name = 'W2Exe'
+
+include ':app'
